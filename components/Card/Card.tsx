@@ -35,7 +35,7 @@ const Card: FC<CardProps> = (props) => {
         }}
         className={lcs.card}
       >
-        <h2>{title}</h2>
+        <h2 className={lcs.title}>{title}</h2>
         <div className={lcs.body}>
           <div className={lcs.description}>
             <p>{description}</p>
