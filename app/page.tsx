@@ -38,6 +38,7 @@ export default function Home() {
             range={[index * 0.25, 1]}
             targetScale={targetScale}
             {...card}
+            cardsLength={CARDS_MOCK.length}
           />
         })
       }

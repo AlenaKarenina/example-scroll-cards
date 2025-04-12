@@ -11,10 +11,11 @@ interface CardProps extends CardData {
   range: any
   targetScale: number
   index: number
+  cardsLength: number
 }
 
 const Card: FC<CardProps> = (props) => {
-  const { title, description, src, color, index, progress, range, targetScale } = props
+  const { title, description, src, color, index, progress, range, targetScale, cardsLength } = props
 
   const container = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -31,7 +32,7 @@ const Card: FC<CardProps> = (props) => {
         style={{
           backgroundColor: color,
           scale,
-          top:`calc(-5vh + ${index * 30}px)`
+          top:`calc(-${cardsLength}vh + ${index * 30}px)`
         }}
         className={lcs.card}
       >
